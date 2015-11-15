@@ -17,9 +17,86 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    font-family: 'Raleway', sans-serif;
+}
+
+body .mainHeader{
+  height: 90px;
+  margin: 0 0 15px 0;
+  border-bottom: 4px solid #FF660D;
+}
+
+body .mainHeader h1{
+  font-size:44px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
+
+span{
+  color:#FF660D;
+}
+
+.wrapper{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin:0 auto;
+}
+
+.wrapper .content{
+  width: 90%;
+  overflow: hidden;
+  margin:0 auto;
 }
 
 .items{
-  width: 300px;
+  padding:0;
+  width: 18vw;
+  height: 18vw;
   box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.items header{
+  width: 100%;
+  min-height:80px;
+  padding:10px;
+  color: #FFF;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.items .text{
+  width:100%;
+  position: absolute;
+  background-color: rgba(225,225,225,0.8);
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  transition: all 1s ease;
+}
+
+.items .text h4{
+  transition: all 0.5s ease;
+}
+
+.items .hover-action{
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.items:hover .text h4{
+  color:#FF660D;
+}
+
+.items:hover .hover-action{
+  display: block;
+  max-height: 300px;
+}
+
+.items .hover-action footer{
 }
