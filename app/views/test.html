@@ -1,0 +1,13 @@
+<div>
+  <h1>ANGULAR IS WORKING</h1>
+
+  <div class="items" ng-repeat="item in itunesList track by $index" styles="" data-category="{{item.category.attributes.label}}">
+    <h3>{{item["im:name"].label}}</h3>
+    <h3>{{item["im:artist"].label}}</h3>
+    <h4>{{item["im:releaseDate"].attributes.label}}</h4>
+    <p>{{item["im:price"].label}}</p>
+    <p>{{item.rights.label}}</p>
+    <img src={{item["im:image"][2].label}} style="width:200px;" alt="" />
+    <hr>
+  </div>
+</div>
