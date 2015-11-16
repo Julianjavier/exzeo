@@ -44,6 +44,32 @@ span{
   margin:0 auto;
 }
 
+.wrapper form{
+  width:100%;
+  margin-bottom:20px;
+}
+
+.wrapper form select{
+  display:block;
+  margin-left:20px;
+  float: left;
+  height:40px;
+  color:#FFF;
+  background-color:#FF660D;
+}
+
+.wrapper form button{
+  margin-left:20px;
+  height:40px;
+  color:#FFF;
+  background-color:#FF660D;
+  border:none;
+}
+
+.wrapper form button a{
+  color:#FFF;
+}
+
 .wrapper .content{
   width: 90%;
   overflow: hidden;
@@ -89,6 +115,16 @@ span{
   transition: all 1s ease;
 }
 
+.items .hover-action .itunes{
+  text-align: right;
+  font-weight: bold;
+  font-size:12px;
+}
+
+a{
+  color: #FF660D;
+}
+
 .items:hover .text h4{
   color:#FF660D;
 }
@@ -100,4 +136,25 @@ span{
 
 .rights{
   font-size:8px;
+}
+
+@media screen and (max-width: 1024px) {
+    .items {
+      width: 22vw;
+      height: 22vw;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .items {
+      width: 45vw;
+      height: 45vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .items {
+      width: 45vw;
+      height: 45vw;
+    }
 }
