@@ -1,4 +1,9 @@
 <div class="wrapper">
+  <div>
+    <form>
+      <select type="text" ng-model="defaultVar" name="gener" ng-options="option.label for option in list"></select>
+    </form>
+  </div>
   <div class="content">
     <div class="items col-xs-12 col-sm-6 col-md-8" ng-repeat="item in itunesList track by $index" ng-style="{'background':'url({{item['im:image'][2].label}}) center center no-repeat', 'background-size':'cover'}" data-category="{{item.category.attributes.label}}">
       <header>
@@ -8,7 +13,7 @@
       <div class="text">
         <h4>{{item["im:releaseDate"].attributes.label}}</h4>
         <div class="hover-action">
-          <p>{{item["im:price"].label}}</p>
+          <p>{{item["im:price"].label}} <span class="itunes">VIEW IN ITUNES</span></p>
           <footer>
             <p class="rights" >{{item.rights.label}}</p>
           </footer>
