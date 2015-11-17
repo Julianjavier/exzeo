@@ -3,8 +3,26 @@
     <select type="text" ng-model="selectVar" name="gener" ng-options="option.label for option in list"></select>
     <button name="submit">SEARCH</button>
   </form>
-  <div class="content">
-    <div class="items col-xs-12 col-sm-6 col-md-8" ng-repeat="item in itunesList track by $index" ng-style="{'background':'url({{item['im:image'][2].label}}) center center no-repeat', 'background-size':'cover'}" data-category="{{item.category.attributes.label}}">
+  <div ng-if="filter == false" class="content">
+    <div class="items col-xs-12 col-sm-6 col-md-8" ng-repeat="item in itunesList track by $index" ng-style="{'background':'url(' + item['im:image'][2].label + ') center center no-repeat', 'background-size':'cover'}" data-category="{{item.category.attributes.label}}">
+      <header>
+        <h2>{{item["im:name"].label}}</h2>
+        <h2><span>{{item["im:artist"].label}}</span></h2>
+      </header>
+      <div class="text">
+        <h4>{{item["im:releaseDate"].attributes.label}}</h4>
+        <div class="hover-action">
+          <p>{{item["im:price"].label}}</p>
+          <p class="itunes"><a href="">VIEW IN ITUNES</a></p>
+          <footer>
+            <p class="rights" >{{item.rights.label}}</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-if="filter == true" class="content">
+    <div class="items col-xs-12 col-sm-6 col-md-8" ng-repeat="item in filteredList track by $index" ng-style="{'background':'url(' + item['im:image'][2].label + ') center center no-repeat', 'background-size':'cover'}" data-category="{{item.category.attributes.label}}">
       <header>
         <h2>{{item["im:name"].label}}</h2>
         <h2><span>{{item["im:artist"].label}}</span></h2>
